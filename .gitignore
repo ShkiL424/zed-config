@@ -1,0 +1,10 @@
+# Local/private overrides
+*.local.json
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Backups created by install.sh
+*.backup.*

@@ -1,0 +1,312 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "diff_view_style": "split",
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "context7_api_key": "ctx7sk-864cb2a1-dbe4-4e96-9c26-f993a3583f00",
+      },
+    },
+  },
+  "agent": {
+    "enable_feedback": false,
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "vim_mode": false,
+  "ui_font_weight": 300,
+  "buffer_font_weight": 300,
+  "show_wrap_guides": true,
+  "autosave": "on_focus_change",
+  "text_rendering_mode": "platform_default",
+  "tab_size": 2,
+  "extend_comment_on_newline": false,
+  "inline_code_actions": false,
+
+  "when_closing_with_no_tabs": "keep_window_open",
+  "current_line_highlight": "none",
+  "cursor_blink": false,
+
+  "base_keymap": "JetBrains",
+
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_size": 14.5,
+
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 13.0,
+
+  "buffer_line_height": {
+    "custom": 1.7,
+  },
+
+  "buffer_font_features": {
+    "calt": false,
+  },
+
+  "agent_ui_font_size": 14.0,
+  "agent_buffer_font_size": 13.0,
+
+  "colorize_brackets": true,
+  "use_system_window_tabs": false,
+
+  "title_bar": {
+    "show_menus": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+  },
+
+  "project_panel": {
+    // "dock": "right",
+    "dock": "left",
+    "hide_root": true,
+    "default_width": 200,
+    "auto_fold_dirs": false,
+    "indent_size": 15,
+
+    "scrollbar": {
+      "show": "never",
+    },
+    "indent_guides": {
+      "show": "never",
+    },
+    "entry_spacing": "standard",
+  },
+
+  "collaboration_panel": {
+    "dock": "left",
+    "button": false,
+  },
+
+  "outline_panel": {
+    "dock": "left",
+    "default_width": 300,
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+
+  "file_finder": {
+    "modal_max_width": "large",
+  },
+
+  "scrollbar": {
+    "show": "never",
+  },
+
+  "gutter": {
+    "min_line_number_digits": 3,
+    "folds": true,
+    "breakpoints": false,
+    "runnables": true,
+  },
+
+  "agent_servers": {
+    "github-copilot-cli": {
+      "favorite_config_option_values": {
+        "model": ["gpt-5.4", "claude-sonnet-4.6"],
+      },
+      "type": "registry",
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "auto",
+      },
+      "type": "registry",
+    },
+    "codex-acp": {
+      "type": "registry",
+    },
+  },
+
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+
+  "git_panel": {
+    "dock": "right",
+    "tree_view": true,
+  },
+
+  "auto_update_extensions": {
+    "angular": false,
+  },
+
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_pinned_tabs_in_separate_row": false,
+  },
+
+  "preview_tabs": {
+    "enabled": false,
+  },
+
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_close_button": "always",
+  },
+
+  "languages": {
+    "Angular": {
+      "semantic_tokens": "off",
+      "preferred_line_length": 120,
+      "prettier": {
+        "allowed": true,
+      },
+    },
+    "TypeScript": {
+      "semantic_tokens": "off",
+      "preferred_line_length": 120,
+      "inlay_hints": {
+        // "enabled": true,
+        // "show_parameter_hints": true,
+        // "show_other_hints": true,
+        // "show_type_hints": true,
+      },
+    },
+    "Python": {
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+      "language_servers": ["pyright", "ruff"],
+    },
+    "Rust": {},
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "toolbar": {
+    "code_actions": false,
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+
+  "terminal": {
+    "blinking": "on",
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "cursor_shape": "bar",
+    "font_family": "JetBrains Mono",
+    "font_size": 13.0,
+    "line_height": "comfortable",
+  },
+
+  "inlay_hints": {
+    "enabled": false, // todo: check hins for all languages (TypeScript, Rust, Python)
+  },
+
+  // File scan exclusions, hide on the file explorer and search
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/.angular",
+    "**/.idea",
+    "**/node_modules",
+  ],
+
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro Vivid",
+  },
+  "theme_overrides": {
+    "One Dark Pro Vivid": {
+      // "editor.background": "#282c34",
+      "editor.active_line.background": "#2c313c",
+      "editor.line_number": "#495162",
+      "editor.active_line_number": "#727883",
+      // "editor.gutter.background": "#282c34",
+      "editor.subheader.background": "#20252b",
+
+      "status_bar.background": "#282c34",
+      "ghost_element.hover": "#3a4049",
+
+      "tab_bar.background": "#282c34",
+      // "tab.inactive_background": "#21252b",
+      "tab.inactive_background": "#282c34",
+      // "tab.active_background": "#282c34",
+
+      "title_bar.background": "#282c34",
+      "title_bar.inactive_background": "#282c34",
+
+      "terminal.background": "#282c34",
+
+      "panel.background": "#282c34",
+      "panel.focused_border": "#727883",
+
+      "modified": "#5a819f",
+
+      "version_control.added": "#89ca78",
+      "version_control.modified": "#d19a66",
+      "version_control.deleted": "#ef596f",
+      "version_control.word_added": "#375d42",
+      "version_control.word_deleted": "#773f3f",
+
+      "syntax": {
+        "comment": {
+          "color": "#5c6370",
+        },
+        "comment.doc": {
+          "color": "#5c6370",
+        },
+        "boolean": {
+          "color": "#d55fde",
+        },
+        "variable": {
+          "color": "#d19a66",
+        },
+        "variable.special": {
+          "color": "#d55fde",
+        },
+        "punctuation.special": {
+          "color": "#bbbbbb",
+        },
+      },
+    },
+  },
+}
