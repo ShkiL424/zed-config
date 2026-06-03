@@ -8,3 +8,13 @@
 
 # Backups created by install.sh
 *.backup.*
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
