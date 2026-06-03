@@ -136,7 +136,7 @@
   },
 
   "git_panel": {
-    "dock": "right",
+    "dock": "left",
     "tree_view": true,
   },
 
