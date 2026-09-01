@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "model": ""
+    },
+    "copilot": {
+      "prediction_debounce": 75
+    },
+    "provider": "copilot"
+  },
   "diff_view_style": "unified",
   "context_servers": {
     "mcp-server-context7": {
