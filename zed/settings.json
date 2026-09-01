@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "diff_view_style": "split",
+  "diff_view_style": "unified",
   "context_servers": {
     "mcp-server-context7": {
       "enabled": true,
@@ -112,19 +112,31 @@
   },
 
   "agent_servers": {
+    "claude-acp": {
+      "favorite_config_option_values": {
+        "model": [
+          "opus[1m]",
+          "claude-fable-5[1m]"
+        ]
+      },
+      "default_config_options": {
+        "model": "claude-fable-5[1m]",
+        "mode": "auto"
+      },
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "favorite_config_option_values": {
         "model": ["gpt-5.4", "claude-sonnet-4.6"],
       },
       "type": "registry",
     },
-    "claude-acp": {
-      "default_config_options": {
-        "mode": "auto",
-      },
-      "type": "registry",
-    },
     "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.4",
+        "mode": "agent",
+        "reasoning_effort": "medium"
+      },
       "type": "registry",
     },
   },
@@ -154,6 +166,7 @@
   },
 
   "tabs": {
+    "show_diagnostics": "off",
     "file_icons": true,
     "git_status": true,
     "show_close_button": "always",
@@ -249,11 +262,7 @@
     "light": "Material Icon Theme",
     "dark": "Material Icon Theme",
   },
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark Pro Vivid",
-  },
+  "theme": "One Dark Pro Vivid",
   "theme_overrides": {
     "One Dark Pro Vivid": {
       // "editor.background": "#282c34",
