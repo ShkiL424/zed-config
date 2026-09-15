@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "which_key": {
+    "enabled": true
+  },
+  "markdown_preview": {
+    "code_font_family": "JetBrains Mono",
+    "font_family": "JetBrains Mono"
+  },
   "edit_predictions": {
     "open_ai_compatible_api": {
       "model": ""
@@ -129,7 +136,7 @@
         ]
       },
       "default_config_options": {
-        "model": "opus[1m]",
+        "model": "claude-fable-5-1[1m]",
         "mode": "auto"
       },
       "type": "registry"
@@ -266,11 +273,7 @@
     "**/node_modules",
   ],
 
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Material Icon Theme",
-    "dark": "Material Icon Theme",
-  },
+  "icon_theme": "Material Icon Theme",
   "theme": "One Dark Pro Vivid",
   "theme_overrides": {
     "One Dark Pro Vivid": {
