@@ -70,19 +70,13 @@
   {
     "context": "Workspace || Editor",
     "bindings": {
-      "cmd-3": "terminal_panel::Toggle"
+      "cmd-2": "terminal_panel::Toggle"
     }
   },
   {
     "context": "Workspace || Editor",
     "unbind": {
       "alt-f12": "terminal_panel::Toggle"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-2": "task::Spawn"
     }
   },
   {
@@ -99,12 +93,24 @@
   },
   {
     "bindings": {
-      "cmd-4": "agent::Toggle"
+      "cmd-3": "agent::Toggle"
     }
   },
   {
     "bindings": {
       "cmd-shift-g": "git_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-4": "multi_workspace::ToggleWorkspaceSidebar"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "alt-cmd-j": "multi_workspace::ToggleWorkspaceSidebar"
     }
   }
 ]
