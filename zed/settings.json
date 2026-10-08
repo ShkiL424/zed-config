@@ -35,6 +35,7 @@
     },
   },
   "agent": {
+    "notify_when_agent_waiting": "primary_screen",
     "play_sound_when_agent_done": "when_hidden",
     "threads_sidebar": {
       "position": "right"
