@@ -24,7 +24,7 @@
     },
     "provider": "copilot"
   },
-  "diff_view_style": "split",
+  "diff_view_style": "unified",
   "context_servers": {
     "mcp-server-context7": {
       "enabled": true,
@@ -91,6 +91,7 @@
 
   "project_panel": {
     // "dock": "right",
+    "sort_order": "extension",
     "dock": "left",
     "hide_root": true,
     "default_width": 200,
