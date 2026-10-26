@@ -140,7 +140,7 @@
       "favorite_config_option_values": {
         "model": [
           "opus[1m]",
-          "claude-fable-5-1[1m]",
+          "opus"
         ]
       },
       "default_config_options": {
