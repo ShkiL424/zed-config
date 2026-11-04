@@ -16,6 +16,7 @@
     "font_family": "JetBrains Mono"
   },
   "edit_predictions": {
+    "button": false,
     "open_ai_compatible_api": {
       "model": ""
     },
@@ -144,7 +145,7 @@
         ]
       },
       "default_config_options": {
-        "effort": "medium",
+        "effort": "low",
         "model": "opus",
         "mode": "auto"
       },
