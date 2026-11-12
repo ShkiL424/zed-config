@@ -145,7 +145,7 @@
         ]
       },
       "default_config_options": {
-        "effort": "low",
+        "effort": "medium",
         "model": "opus",
         "mode": "auto"
       },
