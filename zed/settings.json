@@ -30,9 +30,6 @@
     "mcp-server-context7": {
       "enabled": true,
       "remote": false,
-      "settings": {
-        "context7_api_key": "ctx7sk-864cb2a1-dbe4-4e96-9c26-f993a3583f00",
-      },
     },
   },
   "agent": {
@@ -145,8 +142,8 @@
         ]
       },
       "default_config_options": {
-        "effort": "medium",
-        "model": "opus",
+        "effort": "high",
+        "model": "fable[1m]",
         "mode": "auto"
       },
       "type": "registry"
