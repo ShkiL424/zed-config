@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOTFILES_DIR="$HOME/Projects/zed-config"
+# Resolve the repo root from the script location so the repo can live anywhere.
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ZED_DOTFILES="$DOTFILES_DIR/zed"
 ZED_CONFIG="$HOME/.config/zed"
 
@@ -15,16 +16,27 @@ backup_if_real_file() {
   fi
 }
 
-backup_if_real_file "$ZED_CONFIG/settings.json"
-backup_if_real_file "$ZED_CONFIG/keymap.json"
-backup_if_real_file "$ZED_CONFIG/snippets"
-backup_if_real_file "$ZED_CONFIG/themes"
+install_link() {
+  local name="$1"
+  local source="$ZED_DOTFILES/$name"
+  local target="$ZED_CONFIG/$name"
 
-ln -sf "$ZED_DOTFILES/settings.json" "$ZED_CONFIG/settings.json"
-ln -sf "$ZED_DOTFILES/keymap.json" "$ZED_CONFIG/keymap.json"
+  if [ ! -e "$source" ]; then
+    echo "Skipping $name: not found in $ZED_DOTFILES" >&2
+    return
+  fi
 
-ln -sfn "$ZED_DOTFILES/snippets" "$ZED_CONFIG/snippets"
-ln -sfn "$ZED_DOTFILES/themes" "$ZED_CONFIG/themes"
+  backup_if_real_file "$target"
+  # -n: replace an existing symlink to a directory instead of descending into it.
+  ln -sfn "$source" "$target"
+  echo "Linked $target -> $source"
+}
+
+install_link settings.json
+install_link keymap.json
+install_link tasks.json
+install_link snippets
+install_link themes
 
 echo "Zed config installed successfully."
 echo "Restart Zed if themes or snippets do not appear immediately."

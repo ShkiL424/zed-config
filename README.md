@@ -25,7 +25,9 @@ Run the install script to symlink the config files into `~/.config/zed`:
 
 The script will:
 - Back up any existing real files (non-symlinks) with a timestamped `.backup` suffix
-- Create symlinks from `~/.config/zed` to this repo
+- Create symlinks from `~/.config/zed` to this repo (`settings.json`, `keymap.json`, `tasks.json`, `snippets/`, `themes/`)
+
+The repo can be cloned anywhere: the script resolves paths relative to its own location.
 
 ### Windows
 
@@ -58,7 +60,7 @@ To verify the result:
 Get-ChildItem $env:APPDATA\Zed | Select-Object Name, LinkType, Target
 ```
 
-`settings.json` and `keymap.json` should show `SymbolicLink`, `snippets` should show `Junction`.
+`settings.json`, `keymap.json` and `tasks.json` should show `SymbolicLink`, `snippets` and `themes` should show `Junction`.
 
 > Note: keybindings using `cmd` map to the Windows key on Windows, so some of them may be intercepted by the OS.
 > Tasks in `tasks.json` use `sh` and `python3`, which are usually not available on Windows.

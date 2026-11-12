@@ -67,6 +67,7 @@ function Install-Link([string]$Name) {
 
 Install-Link 'settings.json'
 Install-Link 'keymap.json'
+Install-Link 'tasks.json'
 Install-Link 'snippets'
 Install-Link 'themes'
 
