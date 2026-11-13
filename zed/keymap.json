@@ -15,7 +15,7 @@
   {
     "context": "Workspace || Editor",
     "bindings": {
-      "cmd-2": "terminal_panel::Toggle"
+      "secondary-2": "terminal_panel::Toggle"
     }
   },
   {
@@ -38,7 +38,7 @@
   },
   {
     "bindings": {
-      "cmd-3": "agent::Toggle"
+      "secondary-3": "agent::Toggle"
     }
   },
   {
@@ -49,7 +49,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-4": "multi_workspace::ToggleWorkspaceSidebar"
+      "secondary-4": "multi_workspace::ToggleWorkspaceSidebar"
     }
   },
   {

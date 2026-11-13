@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Zed JSON (JSONC) files
+        run: python3 .agents/skills/land/scripts/check-jsonc.py $(git ls-files 'zed/*.json' 'zed/**/*.json')
+
+      - name: Check install.sh
+        run: |
+          bash -n install.sh
+          shellcheck install.sh
+
+      - name: Check install.ps1 syntax
+        shell: pwsh
+        run: |
+          $e = $null
+          [System.Management.Automation.Language.Parser]::ParseFile("$PWD/install.ps1", [ref]$null, [ref]$e) > $null
+          if ($e) { $e; exit 1 }

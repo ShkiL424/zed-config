@@ -10,8 +10,8 @@
   // todo: check if it works properly
   {
     "label": "r/rust",
-    "command": "sh",
-    "args": ["-c", "clear; cargo run -q"],
+    // Runs in the login shell: works in sh/zsh/bash and PowerShell.
+    "command": "clear; cargo run -q",
     "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": false,
     "allow_concurrent_runs": true,

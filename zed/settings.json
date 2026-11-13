@@ -24,9 +24,12 @@
   },
   "diff_view_style": "unified",
   "context_servers": {
-    "mcp-server-context7": {
-      "enabled": true,
-      "remote": false,
+    // API key is read from the CONTEXT7_API_KEY environment variable
+    // (see README); never put it in this file, it is tracked in git.
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {},
     },
   },
   "agent": {
@@ -83,7 +86,6 @@
   },
 
   "project_panel": {
-    // "dock": "right",
     "sort_order": "extension",
     "dock": "left",
     "hide_root": true,
@@ -168,10 +170,6 @@
   "git_panel": {
     "dock": "right",
     "tree_view": true,
-  },
-
-  "auto_update_extensions": {
-    "angular": false,
   },
 
   "tab_bar": {
