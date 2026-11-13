@@ -139,8 +139,8 @@
         ]
       },
       "default_config_options": {
-        "effort": "high",
-        "model": "fable[1m]",
+        "effort": "medium",
+        "model": "opus",
         "mode": "auto"
       },
       "type": "registry"
