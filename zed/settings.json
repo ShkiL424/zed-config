@@ -17,9 +17,6 @@
   },
   "edit_predictions": {
     "button": false,
-    "open_ai_compatible_api": {
-      "model": ""
-    },
     "copilot": {
       "prediction_debounce": 75
     },
@@ -40,8 +37,6 @@
     },
     "enable_feedback": false,
     "dock": "right",
-    "favorite_models": [],
-    "model_parameters": [],
     "default_width": 680
   },
   "vim_mode": false,
@@ -206,12 +201,6 @@
     "TypeScript": {
       "semantic_tokens": "off",
       "preferred_line_length": 120,
-      "inlay_hints": {
-        // "enabled": true,
-        // "show_parameter_hints": true,
-        // "show_other_hints": true,
-        // "show_type_hints": true,
-      },
     },
     "Python": {
       "code_actions_on_format": {
@@ -224,7 +213,6 @@
       },
       "language_servers": ["pyright", "ruff"],
     },
-    "Rust": {},
   },
 
   "telemetry": {
@@ -250,7 +238,7 @@
   },
 
   "inlay_hints": {
-    "enabled": false, // todo: check hins for all languages (TypeScript, Rust, Python)
+    "enabled": false, // todo: check hints for all languages (TypeScript, Rust, Python)
   },
 
   // File scan exclusions, hide on the file explorer and search

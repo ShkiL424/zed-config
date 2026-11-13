@@ -6,9 +6,6 @@
 # macOS
 .DS_Store
 
-# Backups created by install.sh
-*.backup.*
-
 # IDE / editor
 .idea/
 .vscode/
@@ -16,5 +13,4 @@
 *.swp
 *.swo
 *~
-.DS_Store
 Thumbs.db
