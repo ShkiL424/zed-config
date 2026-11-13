@@ -64,7 +64,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-c": ["task::Spawn", { "task_name": "r/rust" }],
+      "ctrl-alt-r": ["task::Spawn", { "task_name": "r/rust" }],
     },
   },
   {
