@@ -170,6 +170,7 @@
   "git_panel": {
     "dock": "right",
     "tree_view": true,
+    "collapse_untracked_diff": true
   },
 
   "tab_bar": {
