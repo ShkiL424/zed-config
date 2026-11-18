@@ -16,13 +16,9 @@
     "font_family": "JetBrains Mono"
   },
   "edit_predictions": {
-    "button": false,
-    "copilot": {
-      "prediction_debounce": 75
-    },
-    "provider": "copilot"
+    "provider": "none"
   },
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "context_servers": {
     // API key is read from the CONTEXT7_API_KEY environment variable
     // (see README); never put it in this file, it is tracked in git.
